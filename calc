@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        double input1, input2;
+        int calculation;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Please enter number 1:");
+        input1 = sc.nextDouble();
+
+        System.out.println("Please enter number 2:");
+        input2 = sc.nextDouble();
+
+        System.out.println("Please \n press 1 for + \n press 2 for - \n press 3 for * \n press 4 for / ");
+        calculation = sc.nextInt();
+
+        switch(calculation) {
+            case 1:
+                System.out.println("Calculation result is " + (input1 + input2));
+                break;
+            case 2:
+                System.out.println("Calculation result is " + (input1 - input2));
+                break;
+            case 3:
+                System.out.println("Calculation result is " + (input1 * input2));
+                break;
+            case 4:
+                if(input2 != 0) {
+                    System.out.println("Calculation result is " + (input1 / input2));
+                }
+                else System.out.println("input 2 can not be 0!");
+                break;
+            default:
+                System.out.println("Invalid input!");
+        }
+    }
+}
